@@ -16,19 +16,17 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         self.memes = appDelegate.memes
-        println(self.memes)
         
         tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(self.memes.count)
         return self.memes.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("MemeSentTableViewCell") as! MemeTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MemeSentTableViewCell") as! MemeSentTableViewCell
         
         let meme = memes[indexPath.row]
         
@@ -37,5 +35,9 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
         cell.bottomTextLabel.text = meme.bottomText
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }

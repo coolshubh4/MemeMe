@@ -45,8 +45,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // Default state of Share button will be disabled
         shareButton.enabled = false
-        
-        navigationItem.title = "Meme Editor"
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -147,10 +145,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func shareMeme(sender: UIBarButtonItem) {
         
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
+        
         if let mImage = generateMemedImage() {
             
-            navigationController?.setNavigationBarHidden(true, animated: true)
-            navigationController?.setToolbarHidden(true, animated: true)
             let controller = UIActivityViewController(activityItems: [mImage], applicationActivities: nil)
             
             controller.completionWithItemsHandler = {
@@ -160,7 +159,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 self.save()
                 controller.dismissViewControllerAnimated(true, completion: nil)
             }
+            
             navigationController?.setNavigationBarHidden(false, animated: true)
+            navigationController?.setToolbarHidden(false, animated: true)
+            
             presentViewController(controller, animated: true, completion: nil)
         }
     }
