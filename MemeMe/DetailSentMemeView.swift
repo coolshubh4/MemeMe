@@ -9,7 +9,15 @@
 import UIKit
 
 class DetailSentMemeView: UIViewController {
-
+    
+    var meme: Meme!
     
     @IBOutlet weak var memedImage: UIImageView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        memedImage.image = meme.memeImage
+        memedImage.contentMode = UIViewContentMode.ScaleAspectFit
+    }
 }
