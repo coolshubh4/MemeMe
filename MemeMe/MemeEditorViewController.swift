@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  MemeMe
 //
 //  Created by Shubham Tripathi on 26/07/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
@@ -30,19 +30,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSStrokeWidthAttributeName: -3.6]
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Checking for availability of Camera
-        cameraImagePicker.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        
-        // Default text for top an bottom textfields
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
-        
-        subscribeToKeyboardNotification()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +45,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Default state of Share button will be disabled
         shareButton.enabled = false
+        
+        navigationItem.title = "Meme Editor"
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Checking for availability of Camera
+        cameraImagePicker.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        
+        // Default text for top an bottom textfields
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
+        
+        subscribeToKeyboardNotification()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -158,6 +160,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 self.save()
                 controller.dismissViewControllerAnimated(true, completion: nil)
             }
+            navigationController?.setNavigationBarHidden(false, animated: true)
             presentViewController(controller, animated: true, completion: nil)
         }
     }

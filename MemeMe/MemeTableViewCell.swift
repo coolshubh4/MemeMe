@@ -6,4 +6,13 @@
 //  Copyright (c) 2015 coolshubh4. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MemeTableViewCell: UITableViewCell {
+
+
+    @IBOutlet weak var memeImage: UIImageView!
+    @IBOutlet weak var topTextLabel: UILabel!
+    @IBOutlet weak var bottomTextLabel: UILabel!
+
+}
