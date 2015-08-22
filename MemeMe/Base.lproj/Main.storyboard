@@ -89,7 +89,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="qDW-dv-dKJ">
             <objects>
-                <tabBarController id="sRF-4e-xvP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SentMemeTabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sRF-4e-xvP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kF4-5L-dVr"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5cL-69-CAW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -108,7 +109,7 @@
         <!--Sent Memes-->
         <scene sceneID="gKQ-DT-Vsc">
             <objects>
-                <tableViewController id="UvX-pG-ViU" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MemeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UvX-pG-ViU" customClass="MemeTableViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="149" sectionHeaderHeight="22" sectionFooterHeight="22" id="HzR-Vd-u74">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,13 +128,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfD-5a-yzY">
-                                            <rect key="frame" x="156" y="8" width="156" height="21"/>
+                                            <rect key="frame" x="156" y="8" width="156" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.1450980392" green="0.4823529412" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-by-QlO">
-                                            <rect key="frame" x="156" y="119" width="156" height="21"/>
+                                            <rect key="frame" x="156" y="119" width="156" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.14509803921568629" green="0.4823529411764706" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -228,6 +229,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flowLayout" destination="UqN-gk-jjV" id="bGg-NN-wo4"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekq-jF-KSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +254,7 @@
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-8L-b2N">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,6 +346,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ctJ-vG-BlW"/>
+        <segue reference="7M5-tE-ucs"/>
     </inferredMetricsTieBreakers>
 </document>

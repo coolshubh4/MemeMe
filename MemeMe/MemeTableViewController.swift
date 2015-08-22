@@ -26,11 +26,13 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // The TableView's cell will be of type MemeSentTableViewCell
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeSentTableViewCell") as! MemeSentTableViewCell
         
         let meme = memes[indexPath.row]
         
         cell.memeImage.image = meme.memeImage
+        cell.memeImage.contentMode = UIViewContentMode.ScaleAspectFit
         cell.topTextLabel.text = meme.topText
         cell.bottomTextLabel.text = meme.bottomText
         
@@ -43,6 +45,7 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
         
         controller.meme = memes[indexPath.row]
         
-        self.navigationController!.pushViewController(controller, animated: true)
+        // Pushing the DetailSentMemeView controller
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

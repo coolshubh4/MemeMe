@@ -100,14 +100,11 @@
 			isa = PBXGroup;
 			children = (
 				987AB7051B64DC5D00B7A980 /* AppDelegate.swift */,
-				98D2E1361B6F1FE1006F3095 /* Meme.swift */,
-				9866B1ED1B86577A00241F3F /* MemeTableViewController.swift */,
-				98EC67FD1B87902B00C11FE8 /* MemeCollectionViewController.swift */,
+				98D3CDD91B8843DE003640ED /* Model */,
+				98D3CDD81B8843C2003640ED /* Delegates */,
+				98D3CDD71B88437F003640ED /* TabBarViewControllers */,
 				987AB7071B64DC5D00B7A980 /* MemeEditorViewController.swift */,
-				98A1DC9A1B6CCEFA00636B47 /* TopBottomTextDelegate.swift */,
-				9866B1F01B8660AC00241F3F /* MemeSentTableViewCell.swift */,
 				98EC68031B87B08C00C11FE8 /* DetailSentMemeView.swift */,
-				98EC68001B8796E800C11FE8 /* MemeSentCollectionViewCell.swift */,
 				987AB7091B64DC5D00B7A980 /* Main.storyboard */,
 				987AB70C1B64DC5D00B7A980 /* Images.xcassets */,
 				987AB70E1B64DC5D00B7A980 /* LaunchScreen.xib */,
@@ -139,6 +136,33 @@
 				987AB71A1B64DC5D00B7A980 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98D3CDD71B88437F003640ED /* TabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9866B1ED1B86577A00241F3F /* MemeTableViewController.swift */,
+				98EC68001B8796E800C11FE8 /* MemeSentCollectionViewCell.swift */,
+				9866B1F01B8660AC00241F3F /* MemeSentTableViewCell.swift */,
+				98EC67FD1B87902B00C11FE8 /* MemeCollectionViewController.swift */,
+			);
+			name = TabBarViewControllers;
+			sourceTree = "<group>";
+		};
+		98D3CDD81B8843C2003640ED /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				98A1DC9A1B6CCEFA00636B47 /* TopBottomTextDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		98D3CDD91B8843DE003640ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98D2E1361B6F1FE1006F3095 /* Meme.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

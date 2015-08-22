@@ -45,6 +45,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // Default state of Share button will be disabled
         shareButton.enabled = false
+        
+        // Default text for top an bottom textfields
+        topText.text = "TOP"
+        bottomText.text = "BOTTOM"
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -52,10 +56,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // Checking for availability of Camera
         cameraImagePicker.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        
-        // Default text for top an bottom textfields
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
         
         subscribeToKeyboardNotification()
     }
@@ -92,7 +92,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         if let imagePicked = info[UIImagePickerControllerOriginalImage] as? UIImage {
             originalImage.image = imagePicked
-            originalImage.contentMode = UIViewContentMode.ScaleAspectFill
+            originalImage.contentMode = UIViewContentMode.ScaleAspectFit
         }
         dismissViewControllerAnimated(true, completion: nil)
     }
