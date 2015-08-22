@@ -46,6 +46,6 @@ class MemeTableViewController: UITableViewController, UITableViewDelegate, UITab
         controller.meme = memes[indexPath.row]
         
         // Pushing the DetailSentMemeView controller
-        self.navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
