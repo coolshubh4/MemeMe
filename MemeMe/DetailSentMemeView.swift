@@ -19,6 +19,6 @@ class DetailSentMemeView: UIViewController {
         super.viewWillAppear(animated)
         
         memedImage.image = meme.memeImage
-        memedImage.contentMode = UIViewContentMode.ScaleAspectFill
+        memedImage.contentMode = UIViewContentMode.ScaleAspectFit
     }
 }

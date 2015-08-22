@@ -249,32 +249,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHi-Lx-nXu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-8L-b2N">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qYE-LZ-zmy" firstAttribute="top" secondItem="0zG-8L-b2N" secondAttribute="bottom" id="AhM-vg-eI2"/>
-                            <constraint firstItem="QHi-Lx-nXu" firstAttribute="leading" secondItem="47D-93-o46" secondAttribute="leading" id="W39-3L-Xh5"/>
+                            <constraint firstItem="0zG-8L-b2N" firstAttribute="top" secondItem="f9p-mY-kWB" secondAttribute="bottom" id="PSR-yy-oH4"/>
                             <constraint firstItem="0zG-8L-b2N" firstAttribute="leading" secondItem="47D-93-o46" secondAttribute="leadingMargin" constant="-16" id="a78-Pj-MNS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0zG-8L-b2N" secondAttribute="trailing" constant="-16" id="gYy-75-1mL"/>
-                            <constraint firstItem="QHi-Lx-nXu" firstAttribute="top" secondItem="47D-93-o46" secondAttribute="top" id="p7Y-71-or9"/>
-                            <constraint firstAttribute="trailing" secondItem="QHi-Lx-nXu" secondAttribute="trailing" id="zTw-d5-Elm"/>
-                            <constraint firstItem="0zG-8L-b2N" firstAttribute="top" secondItem="QHi-Lx-nXu" secondAttribute="bottom" id="ziV-Rz-Pjn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="En1-E5-hw3"/>
                     <connections>
                         <outlet property="memedImage" destination="0zG-8L-b2N" id="C9i-yA-P9T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpc-gs-Sqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="-2054"/>
+            <point key="canvasLocation" x="2137" y="-2054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vYm-BM-Jaf">
@@ -338,6 +333,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rY5-oO-DUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="567" y="-2054"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JV1-6A-Voa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAQ-Wl-Box" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wS2-zq-6kj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cig-tB-u71" kind="relationship" relationship="rootViewController" id="NDI-Pn-Azb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBN-bb-fxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605" y="-2054"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
