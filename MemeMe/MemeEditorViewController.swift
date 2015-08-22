@@ -158,6 +158,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 self.save()
                 controller.dismissViewControllerAnimated(true, completion: nil)
+                self.sentMeme()
             }
             
             navigationController?.setNavigationBarHidden(false, animated: true)
@@ -165,6 +166,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             
             presentViewController(controller, animated: true, completion: nil)
         }
+        
+    }
+    
+    // Re-direct user to SentMemeTabBarViewController
+    func sentMeme() {
+        
+        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeTabBarViewController") as! UITabBarController
+        presentViewController(controller, animated: true, completion: nil)
     }
     
     func save() {
